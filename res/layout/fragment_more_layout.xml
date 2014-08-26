@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg_shape"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/list_title_RelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" >
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_titlebg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/title_bg"
+                android:padding="10dp" >
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView_fragment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:shadowColor="#000000"
+                android:shadowDx="0.3"
+                android:shadowDy="0.3"
+                android:shadowRadius="0.3"
+                android:text="@string/more"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/blurred_image_header"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="功能暂未实现哦~"
+            android:textColor="@color/pink"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application them68B5E568B5E568B5E5. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="weibo_tab">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">2dip</item>
+        <item name="android:background">@drawable/tab_bg</item>
+        <item name="android:textColor">@color/bottombar_textcolor_selector</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <color name="pink">#ff2d55</color>
+    <color name="grey">#929292</color>
+    <color name="alpha_pink">#15FF2D55</color>
+    <color name="light_grey">#e7e8ea</color>
+    <color name="white">#FFFFFF</color>
+    <color name="album_grey">#8C8F9B</color>
+    <color name="play_activity_bg_color">#f2f2f2</color>
+    <color name="light_pink">#F8E3E7</color>
+    <color name="alertdialog_stroke_color">#C9C9C9</color>
+    <color name="alertdialog_solid_color">#F3F3F3</color>
+    <color name="alertdialog_pressed_color">#E1E1E1</color>
+    <color name="blue">#257EF6</color>
+    <color name="alpha_grey_bg">#65656555</color>
+    <color name="completely_transparent">#d3d3d3</color>
+    <color name="artwork_album_color">#525252</color>
+    <color name="artwork_artist_color">#545454</color>
+    <color name="letter_color">#B1B1B1</color>
+    <color name="red">#FF3B30</color>
+    <color name="light_red">#FF6258</color>
+    <color name="search_album_grey">#989898</color>
+    
+
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal" >
+
+    <com.stark.view.ElasticListView
+        android:id="@+id/elasticListView_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="42dp" 
+        android:background="#90F3F3F3">
+    </com.stark.view.ElasticListView>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E3E3E3" >
+
+        <RelativeLayout
+            android:id="@+id/search_RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/search_bg2_shape" >
+
+            <com.stark.view.ClearEditText
+                android:id="@+id/clearEditText_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/search"
+                android:ems="20"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </com.stark.view.ClearEditText>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView_search_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:text="@string/cancel"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@drawable/textview_color_selector" />
+    </RelativeLayout>
+
+</FrameLayout>

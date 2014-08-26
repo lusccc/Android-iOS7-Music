@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView_blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/tab_bg"
+        android:orientation="horizontal" >
+
+
+        <RadioButton
+            style="@style/weibo_tab"
+            android:drawableTop="@drawable/performer_selector"
+            android:text="@string/performer" />
+
+        <RadioButton
+            style="@style/weibo_tab"
+            android:drawableTop="@drawable/songs_selector"
+            android:text="@string/song" />
+
+        <RadioButton
+            style="@style/weibo_tab"
+            android:drawableTop="@drawable/album_selector"
+            android:text="@string/album" />
+
+        <RadioButton
+            style="@style/weibo_tab"
+            android:drawableTop="@drawable/more_selector"
+            android:text="@string/more" />
+    </RadioGroup>
+
+</RelativeLayout>

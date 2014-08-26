@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:background="@drawable/playlist_view_bg_selector"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+	<TextView
+        android:id="@+id/textView_letter_in_performerlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dsad"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:textStyle="bold"
+        android:textColor="@color/letter_color"/>
+    <View
+        android:id="@+id/View1"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:background="#D9D9D9"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/LinearLayout1" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/textView_letter" >
+
+        <ImageView
+            android:id="@+id/performerImage_in_performerlist"
+            android:layout_width="86.0dip"
+            android:layout_height="86.0dip"
+            android:src="@drawable/song_pic" />
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/performer_name_in_performerlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="18dp"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:shadowColor="#000000"
+                android:shadowDx="0.3"
+                android:shadowDy="0.3"
+                android:shadowRadius="0.3"
+                android:singleLine="true"
+                android:text="@string/song_name"
+                android:textSize="20sp" 
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/textView_performer_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/performer_name_in_performerlist"
+                android:text="TextView" 
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="18dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

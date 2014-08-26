@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/search_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/search_bg_shape" >
+
+        <RelativeLayout
+            android:id="@+id/search_text_RelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/textView_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView_search"
+                android:text="@string/search"
+                android:textColor="#929398"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/imageView_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView_search"
+                android:src="@drawable/search" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

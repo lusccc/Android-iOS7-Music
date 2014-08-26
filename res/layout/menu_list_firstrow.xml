@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:background="@drawable/playlist_view_bg_selector"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/View1"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/LinearLayout1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#D9D9D9" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="50dp" >
+
+        <ImageView
+            android:id="@+id/albumImage_in_menulist"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:src="@drawable/song_pic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView_artist_in_menulist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:singleLine="true"
+                android:text="@string/song_name"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView_album_menulist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:shadowColor="#000000"
+                android:shadowDx="0.3"
+                android:shadowDy="0.3"
+                android:shadowRadius="0.3"
+                android:singleLine="true"
+                android:text="Medium Text"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_numofsong_menulist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

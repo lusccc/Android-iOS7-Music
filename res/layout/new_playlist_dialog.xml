@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/new_playlist_dialog_bg_shape" >
+
+    <TextView
+        android:id="@+id/textView_new_playlist_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/create_new_playlist_dialogtitle"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_new_playlist_dialog"
+        android:layout_centerHorizontal="true"
+        android:text="@string/enter_playlist_name_dialog" />
+
+    <EditText
+        android:id="@+id/editText_new_playList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_bg_shape"
+        android:ems="10"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="2dp" >
+    </EditText>
+
+    <View
+        android:id="@+id/view_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/editText_new_playList"
+        android:layout_marginTop="20dp"
+        android:background="#A5A5A5" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="45dp"
+        android:layout_below="@+id/view_horizontal_line"
+        android:layout_centerHorizontal="true"
+        android:background="#a5a5a5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/view_horizontal_line"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView_new_playlist_dialog_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/new_playlist_dialog_leftbutton_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/textView_new_playlist_dialog_save"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/new_playlist_dialog_rightbutton_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/blue" />
+    </LinearLayout>
+
+</RelativeLayout>

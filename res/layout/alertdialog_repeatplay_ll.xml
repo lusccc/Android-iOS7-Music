@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout_alertdialog_repeatplay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+         >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_dialog_repeatplay_Row4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LinearLayout_dialog_repeatply_Row123"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical" >
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/alertdialog_default_selector"
+                android:clickable="true"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/cancel"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/blue" />
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_dialog_repeatply_Row123"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/alertdialog_top_row_selector"
+                android:clickable="true"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/turnoff_repeat_play"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/blue" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/completely_transparent" />
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/alertdialog_center_row_selector"
+                android:clickable="true"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/repeat_play_song"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/blue" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/completely_transparent" />
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/alertdialog_bottom_row_selector"
+                android:clickable="true"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/repeat_play_all_songs"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/blue" />
+            </TableRow>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

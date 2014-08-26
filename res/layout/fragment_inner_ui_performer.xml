@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg_shape"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/FrameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true" >
+
+        <com.stark.view.ElasticListView
+            android:id="@+id/elasticListView_albumui_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:divider="@null"
+            android:listSelector="@drawable/timer_list_selector" >
+        </com.stark.view.ElasticListView>
+
+        <RelativeLayout
+            android:id="@+id/list_title_RelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/title_bg"
+                android:padding="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/RelativeLayout_isPlaying_title_albumui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="250dp"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/textView_title_playing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/imageView_arrow"
+                        android:text="@string/title_playing"
+                        android:textColor="@drawable/textview_color_selector"
+                        android:textSize="21sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/arrow_selector" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RelativeLayout_back_performer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/imageView_arrow_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/arrow_left_selector" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imageView_arrow_left"
+                        android:text="@string/performer"
+                        android:textColor="@drawable/textview_color_selector"
+                        android:textSize="21sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView_fragment_title_uilist"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:shadowColor="#000000"
+                android:shadowDx="0.3"
+                android:shadowDy="0.3"
+                android:shadowRadius="0.3"
+                android:singleLine="true"
+                android:text="album_title"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

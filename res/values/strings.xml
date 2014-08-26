@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">音乐</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_playlist">播放列表</string>
+    <string name="play_list">播放列表</string>
+    <string name="title_playing">播放中</string>
+    <string name="search">搜索</string>
+    <string name="create_new_playlist">新建播放列表...</string>
+    <string name="create_new_playlist_dialogtitle">新建播放列表</string>
+    <string name="enter_playlist_name_dialog">请输入此播放列表的名称。</string>
+    <string name="song_name">爱情公寓</string>
+    <string name="artist">曾小贤</string>
+    <string name="album_name">未知专辑</string>
+    <string name="random_play">随机播放</string>
+    <string name="isplaying_music_number">3/148</string>
+    <string name="play_current_time">00:00</string>
+    <string name="play_remaining_time">-2:40</string>
+    <string name="play_song_name">暧昧</string>
+    <string name="play_artist_name">杨丞琳</string>
+    <string name="repeat_play">重复播放</string>
+    <string name="turnoff_repeat_play">关闭重复播放</string>
+    <string name="repeat_play_song">重复播放歌曲</string>
+    <string name="repeat_play_all_songs">重复播放所有歌曲</string>
+    <string name="cancel">取消</string>
+	<string name="random_play_all">随机播放所有</string>
+	<string name="unknow_performer">位置表演者</string>
+	<string name="unknow_album">未知专辑</string>
+	<string name="save">存储</string>
+	<string name="done">完成</string>
+	<string name="album">专辑</string>
+	<string name="clean">清除</string>
+	<string name="delete">删除</string>
+	<string name="edit">编辑</string>
+	<string name="performer">表演者</string>
+	<string name="grade">评分</string>
+	<string name="remove">移除</string>
+	<string name="song">歌曲</string>
+	<string name="more">更多</string>
+	<string name="num_of_album">张专辑</string>
+	<string name="num_of_performer">位表演者</string>
+	<string name="num_of_song">首歌曲</string>
+	<string name="add_music">添加歌曲</string>
+</resources>

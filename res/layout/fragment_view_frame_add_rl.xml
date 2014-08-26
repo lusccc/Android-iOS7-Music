@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg_shape"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/FrameLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true" >
+
+        <com.stark.view.ElasticListView
+            android:id="@+id/elasticListView_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="@drawable/timer_list_selector"
+            android:clickable="true" >
+        </com.stark.view.ElasticListView>
+
+        <RelativeLayout
+            android:id="@+id/list_title_RelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/title_bg"
+                android:padding="10dp" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="250dp"
+                    android:clickable="true" >
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textView_title_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:text="@string/done"
+                    android:textColor="@drawable/textview_color_selector"
+                    android:textSize="21sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView_fragment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:shadowColor="#000000"
+                android:shadowDx="0.3"
+                android:shadowDy="0.3"
+                android:shadowRadius="0.3"
+                android:text="@string/title_playlist"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </RelativeLayout>
+
+        <com.stark.view.SideBar
+            android:id="@+id/sideBar"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginTop="30dp" />
+    </FrameLayout>
+
+</RelativeLayout>

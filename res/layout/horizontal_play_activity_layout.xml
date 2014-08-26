@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#000000"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_text_artwork"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/textView_artwork_album_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:shadowDx="0.3"
+                    android:shadowDy="0.3"
+                    android:shadowRadius="0.3"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="44sp" />
+
+                <TextView
+                    android:id="@+id/textView_artwork_artist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_artwork_album_name"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="44sp" />
+            </RelativeLayout>
+            <!-- 设置两张专辑图片，为了动画转变时使用 -->
+
+            <ImageView
+                android:id="@+id/imageView_artwork_front"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/imageView_artwork_behind"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/play_activity_btn_rl"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="0.5" >
+
+            <ImageView
+                android:id="@+id/imageView_playbtn_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/play_pause_white_selector" />
+
+            <ImageView
+                android:id="@+id/imageView_playbtn_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"
+                android:layout_toLeftOf="@+id/imageView_playbtn_pause"
+                android:clickable="true"
+                android:src="@drawable/play_forward_white_selector" />
+
+            <ImageView
+                android:id="@+id/imageView_playbtn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/imageView_playbtn_pause"
+                android:clickable="true"
+                android:src="@drawable/play_next_white_selector" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <com.stark.view.ElasticListView
+            android:id="@+id/elasticListView_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.stark.view.ElasticListView>
+    </RelativeLayout>
+
+</LinearLayout>
