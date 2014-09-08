@@ -200,7 +200,7 @@
                 android:id="@+id/imageView_playbtn_pause"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/imageView2"
+                android:layout_alignTop="@+id/iv_notification_pause"
                 android:layout_centerHorizontal="true"
                 android:clickable="true"
                 android:padding="10dp"

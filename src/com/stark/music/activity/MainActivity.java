@@ -5,7 +5,6 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -131,7 +130,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 		 //exit();
 		//android.os.Process.killProcess(android.os.Process.myPid());
 
-		Log.e("", "ondestory");
+		Log.e("", " mainactivity ondestory");
 		super.onDestroy();
 	}
 

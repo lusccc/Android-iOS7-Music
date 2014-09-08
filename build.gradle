@@ -10,12 +10,17 @@ apply plugin: 'android'
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
+    compile 'com.android.support:support-v4:20.0.0'
 }
 
 android {
     compileSdkVersion 20
     buildToolsVersion "20.0.0"
 
+
+//    dexOptions {
+//        preDexLibraries = false
+//    }
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'

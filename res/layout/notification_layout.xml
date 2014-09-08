@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="64dp">
+
+   <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/iv_notification_album"
+        android:src="@drawable/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_notification_album"
+        >
+        <TextView
+            android:id="@+id/tv_notification_songinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="周杰伦 - 东风破"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_pause_white_selector"
+            android:id="@+id/iv_notification_pause"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_notification_songinfo"
+            android:layout_marginTop="5dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_notification_pre"
+            android:src="@drawable/play_forward_white_selector"
+            android:layout_below="@+id/tv_notification_songinfo"
+            android:layout_toLeftOf="@+id/iv_notification_pause"
+            android:layout_toStartOf="@+id/iv_notification_pause"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_notification_next"
+            android:layout_below="@+id/tv_notification_songinfo"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/play_next_white_selector"
+            android:layout_toRightOf="@+id/iv_notification_pause"
+            android:layout_toEndOf="@+id/iv_notification_pause" />
+    </RelativeLayout>
+</RelativeLayout>

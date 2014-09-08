@@ -56,7 +56,6 @@ public class SortCursor extends CursorWrapper{
 
 	public SortCursor(Cursor cursor,String columnName) {		
 		super(cursor);
-		// TODO Auto-generated constructor stub
 		mCursor = cursor;
 		if(mCursor != null && mCursor.getCount() > 0) {
 			int i = 0;
