@@ -24,6 +24,7 @@ import com.stark.domain.LrcContent;
 import com.stark.domain.LrcProcess;
 import com.stark.domain.Mp3Info;
 import com.stark.music.R;
+import com.stark.music.activity.MainActivity;
 import com.stark.util.MediaUtil;
 
 import java.io.FileNotFoundException;
@@ -270,21 +271,25 @@ public class PlayerService extends Service {
         mRemoteViews.setImageViewBitmap(R.id.iv_notification_album, MediaUtil.getArtwork(this, mp3Infos.get(current).getId(),
                 mp3Infos.get(current).getAlbumId(), true, false));
         if(isPause()){
-            mRemoteViews.setImageViewResource(R.id.iv_notification_pause,R.drawable.play_play_white);
+            mRemoteViews.setImageViewResource(R.id.iv_notification_pause, R.drawable.play_play_white);
         }else{
             mRemoteViews.setImageViewResource(R.id.iv_notification_pause,R.drawable.play_pause_white_selector);
 
         }
 
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 1, new Intent(), Notification.FLAG_ONGOING_EVENT);
+        Intent jumpIntent = new Intent();
+        jumpIntent.setClass(this, MainActivity.class);
         mBuilder
                 .setContent(mRemoteViews)
                 .setContentIntent(pendingIntent)
                 .setWhen(System.currentTimeMillis())// 通知产生的时间，会在通知信息里显示
-                .setTicker("正在播放"+mp3Infos.get(current).getTitle())
+                .setTicker("正在播放 "+mp3Infos.get(current).getTitle())
                 .setPriority(Notification.PRIORITY_DEFAULT)// 设置该通知优先级
                 .setOngoing(true)
+                .setContentIntent(PendingIntent.getActivity(this,0,jumpIntent,0))
                 .setSmallIcon(R.drawable.ic_launcher)
+
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher));
         notification = mBuilder.build();
         notification.flags = Notification.FLAG_ONGOING_EVENT;

@@ -1,11 +1,5 @@
 package com.stark.music.fragment.main;
 
-import java.io.Serializable;
-import java.io.ObjectInputStream.GetField;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Fragment;
@@ -33,7 +27,6 @@ import android.provider.MediaStore.Audio;
 import android.provider.MediaStore.Audio.ArtistColumns;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,7 +50,6 @@ import android.widget.TextView;
 
 import com.stark.adapter.PerformerListViewAdapter;
 import com.stark.adapter.SearchListViewPerformerAdapter;
-import com.stark.adapter.SearchListViewSongAdapter;
 import com.stark.blur.Blur;
 import com.stark.database.DBHelperofPlayState;
 import com.stark.domain.AppConstant;
@@ -72,6 +64,11 @@ import com.stark.util.SortCursor;
 import com.stark.view.ClearEditText;
 import com.stark.view.ElasticListView;
 import com.stark.view.SideBar;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PerformerFragment extends Fragment implements
 		LoaderCallbacks<Cursor> {
@@ -614,11 +611,11 @@ public class PerformerFragment extends Fragment implements
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
-			if (position == itemNum+1){
+			if (position == itemNum+2){
 				//最后一项,footerview!!!!!
 				return;
 			}
-			if (position == 0) {
+			if (position == 1) {
 				findView(view);
 				resetView();
 				setAnim(view);
@@ -647,7 +644,7 @@ public class PerformerFragment extends Fragment implements
 			} else {
 				showTitleAnim();
 				view.setPressed(true);
-				mCursor.moveToPosition(position - 1);
+				mCursor.moveToPosition(position -2);
 				String album = mCursor.getString(mAlbumNameIndex);
 				String songNum = mCursor.getString(mAlbumNumIndex);
 				String artistName = mCursor.getString(mArtistNameIndex);

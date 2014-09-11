@@ -545,6 +545,9 @@ public class PlayListFragment extends Fragment {
 				showTitleAnim();
 				view.setPressed(true);
 				Bundle bundle = new Bundle();
+                if((position-3)<0){
+                    return;
+                }
 				bundle.putString("list_table_name",
 						"_" + listInfos.get(position - 3).getListName());
 				PlayListUiListFragment pluFragment = PlayListUiListFragment

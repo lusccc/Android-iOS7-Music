@@ -161,6 +161,8 @@ public class SongsFragmentInAddActivity extends Fragment implements
 	public void setUpView() {
 		titleTextView.setText(R.string.add_music);
 		//elasticListView.addHeaderView(getFirstHeaderView());
+        View v = View.inflate(getActivity(), R.layout.listview_empty_row, null);
+        elasticListView.addHeaderView(v);
 		elasticListView.addFooterView(View.inflate(getActivity(),
 				R.layout.footer_view, null));
 		slvaAdapter = new SongListViewAdapterForAddActivity(getActivity(),
@@ -274,7 +276,7 @@ public class SongsFragmentInAddActivity extends Fragment implements
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
 			
-				choosedSongs.add(position );
+				choosedSongs.add(position+1 );
 				view.setClickable(false);
 				ImageView add_circle = (ImageView) view
 						.findViewById(R.id.imageView_add_circle);

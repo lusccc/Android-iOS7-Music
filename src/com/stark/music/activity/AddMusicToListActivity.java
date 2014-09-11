@@ -107,7 +107,7 @@ public class AddMusicToListActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 
-		 exit();
+		 //exit();
 		//android.os.Process.killProcess(android.os.Process.myPid());
 
 		Log.e("", "ondestory");

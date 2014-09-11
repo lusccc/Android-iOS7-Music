@@ -9,7 +9,7 @@
         android:id="@+id/elasticListView_search"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="42dp" 
+        android:layout_marginTop="42dp"
         android:background="#90F3F3F3">
     </com.stark.view.ElasticListView>
 
@@ -21,11 +21,10 @@
 
         <RelativeLayout
             android:id="@+id/search_RelativeLayout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="32dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="60dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/search_bg2_shape" >
 
@@ -38,7 +37,7 @@
                 android:layout_marginLeft="5dp"
                 android:background="@null"
                 android:drawableLeft="@drawable/search"
-                android:ems="20"
+                android:ems="17"
                 android:hint="@string/search"
                 android:imeOptions="actionSearch"
                 android:singleLine="true" >

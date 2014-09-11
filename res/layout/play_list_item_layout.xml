@@ -51,7 +51,7 @@
                 android:shadowRadius="0.3"
                 android:singleLine="true"
                 android:text="@string/song_name"
-                android:textSize="20sp" 
+                android:textSize="20sp"
                 android:layout_centerVertical="true"/>
 
             <ImageView

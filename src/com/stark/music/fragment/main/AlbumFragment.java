@@ -1,10 +1,5 @@
 package com.stark.music.fragment.main;
 
-import java.io.Serializable;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Fragment;
@@ -69,6 +64,11 @@ import com.stark.util.SortCursor;
 import com.stark.view.ClearEditText;
 import com.stark.view.ElasticListView;
 import com.stark.view.SideBar;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class AlbumFragment extends Fragment implements LoaderCallbacks<Cursor> {
 	private ElasticListView elasticListView;
@@ -143,7 +143,8 @@ public class AlbumFragment extends Fragment implements LoaderCallbacks<Cursor> {
 	}
 
 	public void setUpView() {
-		
+        View v = View.inflate(getActivity(), R.layout.listview_empty_row, null);
+        elasticListView.addHeaderView(v);
 		elasticListView.addHeaderView(getHeaderView());
 		elasticListView.addFooterView(getFirstFooterView());
 		elasticListView.addFooterView(getSecondFooterView());
@@ -188,12 +189,9 @@ public class AlbumFragment extends Fragment implements LoaderCallbacks<Cursor> {
 	}
 
 	public View getHeaderView() {
-		View headView = LayoutInflater.from(context).inflate(
-				R.layout.search_ll, null);
-		headView.setPadding(Dip2Px.px2dip(context, 40),
-				Dip2Px.px2dip(context, 480), Dip2Px.px2dip(context, 40),
-				Dip2Px.px2dip(context, 30));
-		return headView;
+        View headerView = LayoutInflater.from(context).inflate(
+                R.layout.search_ll, null);
+        return headerView;
 	}
 
 	public void initSideBar() {
@@ -549,10 +547,13 @@ public class AlbumFragment extends Fragment implements LoaderCallbacks<Cursor> {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
-			if(position == itemNum +1){
+			if(position == itemNum +2){
 				return;
 			}
-			if (position == 0) {
+            if(position == 0){
+                return;
+            }
+			if (position == 1) {
 				findView(view);
 				resetView();
 				setAnim(view);
@@ -582,7 +583,7 @@ public class AlbumFragment extends Fragment implements LoaderCallbacks<Cursor> {
 			} else {
 				showTitleAnim();
 				view.setPressed(true);
-				mCursor.moveToPosition(position - 1);
+				mCursor.moveToPosition(position - 1-1);
 				String album = mCursor.getString(mAlbumNameIndex);
 				String songNum = mCursor.getString(mSongNum);
 				long albumId = mCursor.getLong(mAlbumIdIndex);

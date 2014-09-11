@@ -3,11 +3,11 @@
     package="com.stark.music"
     android:installLocation="preferExternal"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="11"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="15" />
     <!-- 读取电话状态权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
@@ -17,37 +17,38 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
+        <meta-data android:name="APP_ID" android:value="6bd9d9788f56da77b87c053ffb4fcf65"/>
+        <meta-data android:name="APP_PID" android:value="default"/>
         <activity
             android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" >
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.PlayMusicActivity" >
-        </activity>
-        <activity android:name=".activity.AddMusicToListActivity" >
-        </activity>
-        <activity android:name=".activity.MenuActivity" >
-        </activity>
-        <activity android:name=".activity.GridViewActivity" >
-        </activity>
-        <activity android:name=".activity.HorizontalPlayMusicActivity" >
-        </activity>
+        <activity android:name=".activity.PlayMusicActivity"></activity>
+        <activity android:name=".activity.AddMusicToListActivity"></activity>
+        <activity android:name=".activity.MenuActivity"></activity>
+        <activity android:name=".activity.GridViewActivity"></activity>
+        <activity android:name=".activity.HorizontalPlayMusicActivity"></activity>
         <!-- 注册服务 -->
         <service
             android:name="com.stark.service.PlayerService"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action
                     android:name="com.stark.media.MUSIC_SERVICE"

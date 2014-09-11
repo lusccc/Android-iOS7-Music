@@ -1,12 +1,5 @@
 package com.stark.music.fragment.main;
 
-import java.io.Serializable;
-import java.lang.ref.SoftReference;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.LoaderManager.LoaderCallbacks;
@@ -65,6 +58,13 @@ import com.stark.util.SortCursor;
 import com.stark.view.ClearEditText;
 import com.stark.view.ElasticListView;
 import com.stark.view.SideBar;
+
+import java.io.Serializable;
+import java.lang.ref.SoftReference;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SongsFragment extends Fragment implements LoaderCallbacks<Cursor> {
 	private View viewRoot;
@@ -238,13 +238,15 @@ public class SongsFragment extends Fragment implements LoaderCallbacks<Cursor> {
 		firstHeaderView = getFirstHeaderView();
 		secondHeaderView = getSecondHeaderView();
 		titleTextView.setText("歌曲");
+        View v = View.inflate(getActivity(), R.layout.listview_empty_row, null);
+        elasticListView.addHeaderView(v);
 		elasticListView.addHeaderView(firstHeaderView);
 		elasticListView.addHeaderView(secondHeaderView);
 		elasticListView.addFooterView(getFirstFooterView());
 		elasticListView.addFooterView(getSecondFooterView());
 		screenWidth = MainActivity.getScreenWidth();
 		screenHeight = MainActivity.getScreenHeight();
-		titleHegiht = Dip2Px.dip2px(getActivity(), 48);
+		//titleHegiht = Dip2Px.dip2px(getActivity(), 48);
 		titleBgRL.getBackground().setAlpha(232);
 		// mBlurredImageHeader.setScreenWidth(screenWidth);
 		if (!PlayerService.isPlaying) {
@@ -315,12 +317,9 @@ public class SongsFragment extends Fragment implements LoaderCallbacks<Cursor> {
 	}
 
 	public View getFirstHeaderView() {
-		View headView = LayoutInflater.from(context).inflate(
-				R.layout.search_ll, null);
-		headView.setPadding(Dip2Px.px2dip(context, 40),
-				Dip2Px.px2dip(context, 480), Dip2Px.px2dip(context, 40),
-				Dip2Px.px2dip(context, 30));
-		return headView;
+        View headerView = LayoutInflater.from(context).inflate(
+                R.layout.search_ll, null);
+		return headerView;
 	}
 
 	public View getSecondHeaderView() {
@@ -517,10 +516,13 @@ public class SongsFragment extends Fragment implements LoaderCallbacks<Cursor> {
 		@Override
 		public void onItemClick(AdapterView<?> parent, final View view,
 				int position, long id) {
-			if (position > itemNum -1+2) {
+			if (position > itemNum -1+2+1) {
 				return;
 			}
-			if (position == 0) {
+            if(position == 0){
+                return;
+            }
+			if (position == 1) {
 				findView(view);
 				resetView();
 				setAnim(view);
@@ -548,10 +550,10 @@ public class SongsFragment extends Fragment implements LoaderCallbacks<Cursor> {
 
 					}
 				});
-			} else if (position == 1) {
+			} else if (position == 2) {
 				startRandomPlay();
 			} else {
-				listPosition = position; // 获取列表点击的位置
+				listPosition = position-1; // 获取列表点击的位置
 				playMusic(listPosition);
 			}
 
@@ -806,6 +808,9 @@ public class SongsFragment extends Fragment implements LoaderCallbacks<Cursor> {
 	}
 
 	public void startRandomPlay() {
+        if(mCursor.getCount() == 0){
+            return;
+        }
 		int position = getRandomIndex(mp3Infos.size() - 1);
 		Mp3Info mp3Info = mp3Infos.get(position);
 		// 添加一系列要传递的数据

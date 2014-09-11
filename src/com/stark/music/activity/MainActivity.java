@@ -22,6 +22,8 @@ import com.stark.music.R;
 import com.stark.music.fragment.main.FragmentFactory;
 import com.stark.service.PlayerService;
 
+import cn.waps.AppConnect;
+
 public class MainActivity extends Activity implements SensorEventListener {
 	private FragmentManager fragmentManager;
 	private RadioGroup radioGroup;
@@ -131,6 +133,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 		//android.os.Process.killProcess(android.os.Process.myPid());
 
 		Log.e("", " mainactivity ondestory");
+        AppConnect.getInstance(this).close();
 		super.onDestroy();
 	}
 
